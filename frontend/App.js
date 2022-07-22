@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { login } from "./assets/js/near/utils";
 import getConfig from "./assets/js/near/config";
+import Supplier from "./pages/supplier/Supplier";
 
 export default function App() {
   const [showNotification, setShowNotification] = React.useState(false);
@@ -16,19 +17,6 @@ export default function App() {
   console.log(restaurant);
 
   React.useEffect(() => {}, []);
-  // The useEffect hook can be used to fire side-effects during render
-  // Learn more: https://reactjs.org/docs/hooks-intro.html
-  React.useEffect(
-    () => {
-      // get_greeting is in near/u tils.js
-
-    },
-
-    // The second argument to useEffect tells React when to re-run the effect
-    // Use an empty array to specify "only run on first render"
-    // This works because signing into NEAR Wallet reloads the page
-    []
-  )
 
   // if not signed in, return early with sign-in prompt
   if (!window.walletConnection.isSignedIn()) {
@@ -47,9 +35,8 @@ export default function App() {
           ! Welcome to NEAR!
         </h1>
         <p>
-          Your contract is storing a greeting message in the NEAR blockchain. To
-          change it you need to sign in using the NEAR Wallet. It is very
-          simple, just use the button below.
+          Welcome to logistics on blockchain. To try it out, you need to sign in
+          using the NEAR Wallet. It is very simple, just use the button below.
         </p>
         <p>
           Do not worry, this app runs in the test network ("testnet"). It works
@@ -66,12 +53,8 @@ export default function App() {
   return (
     // use React Fragment, <>, to avoid wrapping elements in unnecessary divs
     <>
-    hello
-      <Routes>
-        <Route
-          exact
-          path="/"
-        />
+          <Routes>
+        <Route exact path="/" element={<Supplier />} />
       </Routes>
       {showNotification && <Notification />}
     </>
