@@ -21,7 +21,7 @@ export default function App() {
   // Learn more: https://reactjs.org/docs/hooks-intro.html
   React.useEffect(
     () => {
-      // get_greeting is in near/utils.js
+      // get_greeting is in near/u tils.js
       get_greeting()
         .then(greetingFromContract => {
           setGreeting(greetingFromContract)
