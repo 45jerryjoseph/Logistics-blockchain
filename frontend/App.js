@@ -15,7 +15,7 @@ export default function App() {
   console.log(restaurant._id ? "true" : "false");
   console.log(restaurant);
 
-  React.useEffect(() => {}, []);
+  React.useEffect(() => {}, [ ]);
   // The useEffect hook can be used to fire side-effects during render
   // Learn more: https://reactjs.org/docs/hooks-intro.html
   React.useEffect(
