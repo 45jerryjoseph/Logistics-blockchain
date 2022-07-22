@@ -16,6 +16,22 @@ export default function App() {
   console.log(restaurant);
 
   React.useEffect(() => {}, []);
+  // The useEffect hook can be used to fire side-effects during render
+  // Learn more: https://reactjs.org/docs/hooks-intro.html
+  React.useEffect(
+    () => {
+      // get_greeting is in near/u tils.js
+      get_greeting()
+        .then(greetingFromContract => {
+          setGreeting(greetingFromContract)
+        })
+    },
+
+    // The second argument to useEffect tells React when to re-run the effect
+    // Use an empty array to specify "only run on first render"
+    // This works because signing into NEAR Wallet reloads the page
+    []
+  )
 
   // if not signed in, return early with sign-in prompt
   if (!window.walletConnection.isSignedIn()) {
