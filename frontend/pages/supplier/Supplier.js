@@ -1,5 +1,13 @@
 import React from "react";
+import { Footer } from "../footer";
+import SupplierNav from "./Navigation";
 
 export default function Supplier() {
-  return <div>Supplier</div>;
+  return (
+    <div>
+      <SupplierNav />
+      Supplier
+      <Footer />
+    </div>
+  );
 }
