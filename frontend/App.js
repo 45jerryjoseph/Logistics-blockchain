@@ -21,10 +21,7 @@ export default function App() {
   React.useEffect(
     () => {
       // get_greeting is in near/u tils.js
-      get_greeting()
-        .then(greetingFromContract => {
-          setGreeting(greetingFromContract)
-        })
+
     },
 
     // The second argument to useEffect tells React when to re-run the effect
@@ -69,17 +66,11 @@ export default function App() {
   return (
     // use React Fragment, <>, to avoid wrapping elements in unnecessary divs
     <>
+    hello
       <Routes>
         <Route
           exact
           path="/"
-          element={
-            restaurant._id ? (
-              <Home restaurant={restaurant} />
-            ) : (
-              <RestaurantsList setRestaurant={setRestaurant} />
-            )
-          }
         />
       </Routes>
       {showNotification && <Notification />}
