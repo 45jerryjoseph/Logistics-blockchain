@@ -53,8 +53,8 @@ export default function App() {
   return (
     // use React Fragment, <>, to avoid wrapping elements in unnecessary divs
     <>
-          <Routes>
-        <Route exact path="/" element={<Supplier />} />
+      <Routes>
+        <Route exact path="/supplier" element={<Supplier />} />
       </Routes>
       {showNotification && <Notification />}
     </>

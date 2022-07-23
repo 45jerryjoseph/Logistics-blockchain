@@ -1,12 +1,18 @@
 import React from "react";
-import { Footer } from "../footer";
+import { Footer } from "../components/footer";
 import SupplierNav from "./Navigation";
+import HeroCarousel from "../components/carousel";
+import SupCards from "../components/SupCards";
 
 export default function Supplier() {
+  let cards = [{title:"Check Tenders"}, {title:"Manage Storage"}, {title:"Request Funds"}]
+  let name = "Kemsa";
   return (
     <div>
       <SupplierNav />
       Supplier
+      <HeroCarousel/>
+      <SupCards cards={cards}/>
       <Footer />
     </div>
   );
