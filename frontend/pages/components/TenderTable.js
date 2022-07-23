@@ -24,7 +24,7 @@ function TenderTable({tenders}) {
         {tenderList}
       </tbody>
     </Table>
-  );
+  ); 
 }
 
 export default TenderTable;
