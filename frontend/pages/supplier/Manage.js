@@ -11,24 +11,21 @@ export default function Manage() {
     
   }, [type])
   
-  const updateItems = (type) => {
-    setItems(type);
-  };
   return (
     <div>
       <Navigation />
       <div>
         <ListGroup horizontal>
-          <ListGroup.Item action onClick={() => updateItems(type)}>
+          <ListGroup.Item action onClick={() => setType("new")}>
             New Tenders
           </ListGroup.Item>
-          <ListGroup.Item action onClick={() => updateItems(type)}>
-            Applied
+          <ListGroup.Item action onClick={() => setType("pending")}>
+            Pending
           </ListGroup.Item>
-          <ListGroup.Item acttion onClick={() => updateItems(type)}>
+          <ListGroup.Item acttion onClick={() => setType("current")}>
             Current
           </ListGroup.Item>
-          <ListGroup.Item action onClick={() => updateItems(type)}>
+          <ListGroup.Item action onClick={() => setType("completed")}>
             Completed
           </ListGroup.Item>
         </ListGroup>

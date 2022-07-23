@@ -5,7 +5,11 @@ import HeroCarousel from "../components/carousel";
 import SupCards from "../components/SupCards";
 
 export default function Supplier() {
-  let cards = [{title:"Check Tenders"}, {title:"Manage Storage"}, {title:"Request Funds"}]
+  let cards = [
+    { title: "Check Tenders", link: "/tenders" },
+    { title: "Manage Storage", link :"/manage"},
+    { title: "Request Funds", link:"/funds" },
+  ];
   let name = "Kemsa";
   return (
     <div>

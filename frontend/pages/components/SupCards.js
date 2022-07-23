@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import image3 from "../../images/927.jpg";
+import {Link} from "react-router-dom"
 
 function SupCards({cards}) {
   return (
@@ -19,7 +20,9 @@ function SupCards({cards}) {
                 longer.
               </Card.Text>
             </Card.Body>
-            <Button variant="primary">Go somewhere</Button>
+            <Link to={card.link}>
+              <Button variant="primary">Go somewhere</Button>
+            </Link>
           </Card>
         </Col>
       ))}
