@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
-import image3 from "../../images/927.jpg";
+import image3 from "../../images/pharmacy 2.jpg";
 
 function SupCards({cards}) {
   return (
