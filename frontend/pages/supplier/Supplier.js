@@ -10,7 +10,6 @@ export default function Supplier() {
   return (
     <div>
       <SupplierNav />
-      Supplier
       <HeroCarousel/>
       <SupCards cards={cards}/>
       <Footer />
