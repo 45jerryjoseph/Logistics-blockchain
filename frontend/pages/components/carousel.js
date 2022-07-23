@@ -14,8 +14,8 @@ function HeroCarousel() {
           style={styles.image}
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Accessible High Quality Healthcare</h3>
+          <p>We value our customers by serving them with ethusiasim</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={500}>
@@ -26,8 +26,8 @@ function HeroCarousel() {
           style={styles.image}
         />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Distribution</h3>
+          <p>We support better health care service delivery by guaranting uninterupted medical supply</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -38,9 +38,9 @@ function HeroCarousel() {
           style={styles.image}
         />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Improving HealthCare</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            We provide the required health care products at the right time and the right quantities
           </p>
         </Carousel.Caption>
       </Carousel.Item>

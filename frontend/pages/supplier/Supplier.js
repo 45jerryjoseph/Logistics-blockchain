@@ -11,6 +11,7 @@ export default function Supplier() {
     <div>
       <SupplierNav />
       <div className="h-50 w-100"><HeroCarousel/></div>
+      <HeroCarousel/>
       <SupCards cards={cards}/>
       <Footer />
     </div>
