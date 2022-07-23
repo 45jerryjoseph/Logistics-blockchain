@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { login } from "./assets/js/near/utils";
 import getConfig from "./assets/js/near/config";
 import Supplier from "./pages/supplier/Supplier";
+import Manage from "./pages/supplier/Manage";
 
 export default function App() {
   const [showNotification, setShowNotification] = React.useState(false);
@@ -54,7 +55,8 @@ export default function App() {
     // use React Fragment, <>, to avoid wrapping elements in unnecessary divs
     <>
       <Routes>
-        <Route exact path="/supplier" element={<Supplier />} />
+        <Route exact path="/supplier" element={<Supplier />}/>
+          <Route exact path="/supplier/manage" element={<Manage />} />
       </Routes>
       {showNotification && <Notification />}
     </>

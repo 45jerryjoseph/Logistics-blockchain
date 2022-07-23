@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Footer } from "../components/footer";
+import { Footer } from "../components/Footer";
 import SupAccordion from "./Accordion";
-import Navigation from "./navigation";
+import Navigation from "./Navigation";
+import ListGroup from "react-bootstrap/ListGroup";
 
 export default function Manage() {
   const [items, setItems] = useState([]);
@@ -14,7 +15,7 @@ export default function Manage() {
   return (
     <div>
       <Navigation />
-      <div>
+      <div className="sup-tab">
         <ListGroup horizontal>
           <ListGroup.Item action onClick={() => setType("new")}>
             New Tenders
@@ -22,7 +23,7 @@ export default function Manage() {
           <ListGroup.Item action onClick={() => setType("pending")}>
             Pending
           </ListGroup.Item>
-          <ListGroup.Item acttion onClick={() => setType("current")}>
+          <ListGroup.Item action onClick={() => setType("current")}>
             Current
           </ListGroup.Item>
           <ListGroup.Item action onClick={() => setType("completed")}>
@@ -30,7 +31,9 @@ export default function Manage() {
           </ListGroup.Item>
         </ListGroup>
       </div>
+      <div className="sup-list">
 
+      </div>
       <SupAccordion />
     </div>
   );
