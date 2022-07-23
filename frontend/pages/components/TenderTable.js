@@ -28,7 +28,7 @@ function StripedRowExample() {
         </tr>
       </tbody>
     </Table>
-  );
+  ); 
 }
 
 export default StripedRowExample;
