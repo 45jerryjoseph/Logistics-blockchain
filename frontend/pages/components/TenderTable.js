@@ -1,6 +1,16 @@
 import Table from 'react-bootstrap/Table';
 
-function StripedRowExample() {
+function TenderTable({tenders}) {
+
+  const tenderList = tenders.map((tender)=>{
+    return (
+      <tr>
+        <td>{tender.num}</td>
+        <td>{tender.title}</td>
+        <td>{tender.date}</td>
+      </tr>
+    );
+  })
   return (
     <Table striped>
       <thead>
@@ -11,24 +21,10 @@ function StripedRowExample() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Tender Document For the Supply of Laboratory Commodities </td>
-          <td>27/08/2022</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Tender Document For the Supply of Health Products (Topical, Disinfectants, Antiseptics & Oral Liquid) </td>
-          <td>12/09/2022</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td >Tender Document For the Supply of Antiretroviral Medicine (ARVs)</td>
-          <td>21/08/2022</td>
-        </tr>
+        {tenderList}
       </tbody>
     </Table>
   );
 }
 
-export default StripedRowExample;
+export default TenderTable;

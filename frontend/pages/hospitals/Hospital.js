@@ -14,7 +14,9 @@ export default function Supplier() {
   return (
     <div>
       <SupplierNav />
-      <div className="h-50 w-100"><HeroCarousel/></div>
+      <div className="h-50 w-100">
+        <HeroCarousel />
+      </div>
       <Manage />
       <Footer />
     </div>

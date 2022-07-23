@@ -1,14 +1,15 @@
 import React from 'react'
-import Navigation from ".Navigation"
-import { Footer } from '../components/Footer';
+import Navigation from "./Navigation"
+import { Footer } from './Footer';
+import Accordion from 'react-bootstrap/Accordion'
 
 export default function Supply({supply}) {
   return (
     <div>
       <Navigation />
       <div className="supply">
-        <h1>Id: {supply.id}</h1>
-        <h1>Hospital: {supply.hospital}</h1>
+        <h2>title: {supply.title}</h2>
+        <h2>Hospital: {supply.hospital}</h2>
         <h3>Sponsor: {supply.sponsor}</h3>
         <h3>Supplier: {supply.supplier}</h3>
         <h3>Supply Cost: {supply.supply_cost}</h3>
