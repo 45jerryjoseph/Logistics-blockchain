@@ -1,16 +1,17 @@
 import Carousel from "react-bootstrap/Carousel";
-import image1 from '../../images/404-page-large.png'
-import image2 from '../../images/628.jpg'
-import image3 from '../../images/927.jpg'
 
 function HeroCarousel() {
+    const styles = {
+      image: { height: "26rem", objectFit: "cover" },
+    };
   return (
     <Carousel>
       <Carousel.Item interval={1000}>
         <img
-          className="d-block h-10 w-100"
-          src={image1}
+          className="d-block h-5 w-100"
+          src="https://cdn.pixabay.com/photo/2016/02/07/16/35/world-1185076_960_720.png"
           alt="First slide"
+          style={styles.image}
         />
         <Carousel.Caption>
           <h3>Accessible High Quality Healthcare</h3>
@@ -20,8 +21,9 @@ function HeroCarousel() {
       <Carousel.Item interval={500}>
         <img
           className="d-block h-10 w-100"
-          src={image2}
+          src="https://citizentv.s3.amazonaws.com/4848/conversions/KEMSA-og_image.jpg"
           alt="Second slide"
+          style={styles.image}
         />
         <Carousel.Caption>
           <h3>Distribution</h3>
@@ -31,8 +33,9 @@ function HeroCarousel() {
       <Carousel.Item>
         <img
           className="d-block h-10 w-100"
-          src={image3}
+          src="https://www.kemsa.co.ke/wp-content/uploads/2015/09/about.jpg"
           alt="Third slide"
+          style={styles.image}
         />
         <Carousel.Caption>
           <h3>Improving HealthCare</h3>
