@@ -2,12 +2,8 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
-<<<<<<< HEAD
-import image3 from "../../images/pharmacy 2.jpg";
-=======
 import image3 from "../../images/927.jpg";
 import {Link} from "react-router-dom"
->>>>>>> 43f038680697653d947327e9d4d952789ca43d9f
 
 function SupCards({cards}) {
   return (
