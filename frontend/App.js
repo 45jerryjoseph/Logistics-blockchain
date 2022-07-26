@@ -8,7 +8,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { login } from "./assets/js/near/utils";
 import getConfig from "./assets/js/near/config";
 import Supplier from "./pages/supplier/Supplier";
-import Manage from "./pages/supplier/Manage";
+import Donors from "./pages/Donors/Donors";
+import Manage from "./pages/components/Manage";
+import Hospital from "./pages/hospitals/Hospital"
+import Request from "./pages/hospitals/Request";
 
 export default function App() {
   const [showNotification, setShowNotification] = React.useState(false);
@@ -56,7 +59,12 @@ export default function App() {
     <>
       <Routes>
         <Route exact path="/supplier" element={<Supplier />}/>
-          <Route exact path="/supplier/manage" element={<Manage />} />
+        <Route exact path="/donors" element={<Donors />}/>
+        <Route exact path="/supplier/manage" element={<Manage />} />
+        <Route exact path="/supplier" element={<Supplier />} />
+        <Route exact path="/supplier/manage" element={<Manage />} />
+        <Route exact path="/hospital" element={<Hospital />} />
+        <Route exact path="/hospital/request" element={<Request />} />
       </Routes>
       {showNotification && <Notification />}
     </>

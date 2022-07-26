@@ -1,12 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { Footer } from "../components/Footer";
-import SupAccordion from "./Accordion";
-import Navigation from "./Navigation";
 import ListGroup from "react-bootstrap/ListGroup";
+import TenderTable from "./TenderTable"
 
 export default function Manage() {
   const [items, setItems] = useState([]);
   const [type, setType] = useState("new")
+  const tenders = [
+    {
+      num: 1,
+      title: "Tender Document For the Supply of Laboratory Commodities ",
+      date: "27/08/2022",
+    },
+    {
+      num: 2,
+      title:
+        "Tender Document For the Supply of Health Products (Topical, Disinfectants, Antiseptics & Oral Liquid",
+      date: "12/08/2022",
+    },
+    {
+      num: 3,
+      title:
+        "Tender Document For the Supply of Health Products (Topical, Disinfectants, Antiseptics & Oral Liquid",
+      date: "21/08/2022",
+    },
+  ];
 
   useEffect(() => {
     
@@ -14,7 +31,6 @@ export default function Manage() {
   
   return (
     <div>
-      <Navigation />
       <div className="sup-tab">
         <ListGroup horizontal>
           <ListGroup.Item action onClick={() => setType("new")}>
@@ -32,9 +48,8 @@ export default function Manage() {
         </ListGroup>
       </div>
       <div className="sup-list">
-
+        <TenderTable tenders={tenders}/>
       </div>
-      <SupAccordion />
     </div>
   );
 }
