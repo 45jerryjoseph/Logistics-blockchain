@@ -13,13 +13,13 @@ import Manage from "./pages/components/Manage";
 import Hospital from "./pages/hospitals/Hospital"
 import Request from "./pages/hospitals/Request";
 import Public from "./pages/public/public";
+import Supply from "./pages/components/Supply";
 
 export default function App() {
   const [showNotification, setShowNotification] = React.useState(false);
-  const [restaurant, setRestaurant] = React.useState({});
+  const [supply, setSupply] = React.useState({});
 
-  console.log(restaurant._id ? "true" : "false");
-  console.log(restaurant);
+  console.log(supply.title ? "true " +supply : "false");
 
   React.useEffect(() => {}, []);
 
@@ -37,7 +37,7 @@ export default function App() {
           >
             hello
           </label>
-          ! Welcome to NEAR!
+          ! Welcome to NEAR!center
         </h1>
         <p>
           Welcome to logistics on blockchain. To try it out, you need to sign in
@@ -58,14 +58,15 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/supplier" element={<Supplier />}/>
+        <Route exact path="/" element={<Public />}/>
+        <Route exact path="/supplier" element={<Supplier supply={supply} setSupply={setSupply}/>}/>
+        <Route exact path="/supply" element={<Supply supply={supply} />}/>
         <Route exact path="/donors" element={<Donors />}/>
         <Route exact path="/supplier/manage" element={<Manage />} />
         <Route exact path="/supplier" element={<Supplier />} />
         <Route exact path="/supplier/manage" element={<Manage />} />
         <Route exact path="/hospital" element={<Hospital />} />
         <Route exact path="/hospital/request" element={<Request />} />
-        <Route exact path="/public" element={<Public />} />
       </Routes>
       {showNotification && <Notification />}
     </>

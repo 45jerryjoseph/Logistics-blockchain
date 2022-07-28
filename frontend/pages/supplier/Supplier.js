@@ -4,12 +4,14 @@ import SupplierNav from "../components/Navigation";
 import HeroCarousel from "../components/carousel";
 import Manage from "../components/Manage";
 
-export default function Supplier() {
+export default function Supplier({ supply, setSupply }) {
   return (
     <div>
       <SupplierNav />
-      <div className="h-50 w-100"><HeroCarousel/></div>
-      <Manage />
+      <div className="h-50 w-100">
+        <HeroCarousel />
+      </div>
+      <Manage setSupply={setSupply} />
       <Footer />
     </div>
   );

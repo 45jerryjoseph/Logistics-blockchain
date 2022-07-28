@@ -1,16 +1,19 @@
-import Table from 'react-bootstrap/Table';
+import Table from "react-bootstrap/Table";
+import { Link } from "react-router-dom";
 
-function TenderTable({tenders}) {
-
-  const tenderList = tenders.map((tender)=>{
+function TenderTable({ tenders, setSupply }) {
+  const tenderList = tenders.map((tenders) => {
+    console.log("tender is " + tenders)
     return (
-      <tr key={tender.title}>
-        <td>{tender.num}</td>
-        <td>{tender.title}</td>
-        <td>{tender.date}</td>
+      <tr key={tenders.title} onClick={() => setSupply(tenders)}>
+        <Link to="/supply">
+          <td>{tenders.num}</td>
+          <td>{tenders.title}</td>
+          <td>{tenders.date}</td>
+        </Link>
       </tr>
     );
-  })
+  });
   return (
     <Table striped>
       <thead>
@@ -20,11 +23,9 @@ function TenderTable({tenders}) {
           <th>Deadline</th>
         </tr>
       </thead>
-      <tbody>
-        {tenderList}
-      </tbody>
+      <tbody>{tenderList}</tbody>
     </Table>
-  ); 
+  );
 }
 
 export default TenderTable;
