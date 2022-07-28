@@ -12,6 +12,7 @@ import Donors from "./pages/Donors/Donors";
 import Manage from "./pages/components/Manage";
 import Hospital from "./pages/hospitals/Hospital"
 import Request from "./pages/hospitals/Request";
+import Public from "./pages/public/public";
 
 export default function App() {
   const [showNotification, setShowNotification] = React.useState(false);
@@ -64,6 +65,7 @@ export default function App() {
         <Route exact path="/supplier/manage" element={<Manage />} />
         <Route exact path="/hospital" element={<Hospital />} />
         <Route exact path="/hospital/request" element={<Request />} />
+        <Route exact path="/public" element={<Public />} />
       </Routes>
       {showNotification && <Notification />}
     </>
