@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ListGroup from "react-bootstrap/ListGroup";
+import { Footer } from "./Footer";
+import SupplierNav from "./Navigation";
 import TenderTable from "./TenderTable"
 
 export default function Manage() {
@@ -20,7 +22,7 @@ export default function Manage() {
     {
       num: 3,
       title:
-        "Tender Document For the Supply of Health Products (Topical, Disinfectants, Antiseptics & Oral Liquid",
+        "Tender Document For the Supply of Health Products",
       date: "21/08/2022",
     },
   ];
@@ -31,6 +33,7 @@ export default function Manage() {
   
   return (
     <div>
+      <SupplierNav />
       <div className="sup-tab">
         <ListGroup horizontal>
           <ListGroup.Item action onClick={() => setType("new")}>
@@ -50,6 +53,7 @@ export default function Manage() {
       <div className="sup-list">
         <TenderTable tenders={tenders}/>
       </div>
+      <Footer />
     </div>
   );
 }

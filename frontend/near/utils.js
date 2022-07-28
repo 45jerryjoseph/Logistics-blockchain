@@ -65,7 +65,7 @@ export async function add_hospital(name, level, county) {
     level: level,
     county: county,
   });
-  return response;
+  return response; 
 }
 
 export async function add_item(name, cost, manufacturer, type) {

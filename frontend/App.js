@@ -5,8 +5,8 @@ import { Routes, Route } from "react-router-dom";
 import "./assets/css/global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { login } from "./assets/js/near/utils";
-import getConfig from "./assets/js/near/config";
+import { login } from "./near/utils";
+import getConfig from "./near/config";
 import Supplier from "./pages/supplier/Supplier";
 import Donors from "./pages/Donors/Donors";
 import Manage from "./pages/components/Manage";
@@ -55,7 +55,6 @@ export default function App() {
   }
 
   return (
-    // use React Fragment, <>, to avoid wrapping elements in unnecessary divs
     <>
       <Routes>
         <Route exact path="/supplier" element={<Supplier />}/>

@@ -7,6 +7,7 @@ import Table from "react-bootstrap/Table";
 
 export default function Request() {
     const [items, setItems] = useState([{}])
+    
     const itemList = items?.map((item) => {
       return (
         <tr>
@@ -23,8 +24,8 @@ export default function Request() {
       <div>
         <InputGroup className="mb-3">
           <InputGroup.Text>Item name and Quantity</InputGroup.Text>
-          <Form.Control placeholder="Item name" aria-label="First name" />
-          <Form.Control placeholder="Quantity" aria-label="Last name" />
+          <Form.Control name="name" placeholder="Item name" aria-label="name" />
+          <Form.Control name="quantity" placeholder="Quantity" aria-label="quantity" />
           <Button variant="outline-secondary">Add</Button>
         </InputGroup>
         <Table striped>

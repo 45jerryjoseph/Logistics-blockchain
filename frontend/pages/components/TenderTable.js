@@ -4,7 +4,7 @@ function TenderTable({tenders}) {
 
   const tenderList = tenders.map((tender)=>{
     return (
-      <tr>
+      <tr key={tender.title}>
         <td>{tender.num}</td>
         <td>{tender.title}</td>
         <td>{tender.date}</td>
