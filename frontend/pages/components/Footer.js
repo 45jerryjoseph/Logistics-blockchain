@@ -14,7 +14,7 @@ export const Footer = () => {
       <CDBBox
         display="flex"
         justifyContent="between"
-        alignItems="center"
+        alignItems="end"
         className="mx-auto py-4 flex-wrap"
         style={{ width: "80%" }}
       >
